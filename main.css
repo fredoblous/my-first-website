@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/** Home **/
+.dropdown {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.dropdown:hover {
+  pointer-events: all;
+}
+.label {
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: all;
+}
+.spacer {
+  display: inline-block;
+  width: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+}
+.spacer:before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #ffffff;
+  height: 1px;
+  width: 0%;
+  transition: width 0.25s ease;
+  transition-delay: 0.7s;
+}
+.content {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  top: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  transition-delay: 0;
+}
+span {
+  transition: color 0.5s ease;
+}
+.content:hover span {
+  color: #ff0000;
+}
+.dropdown:hover .spacer:before {
+  width: 100%;
+  transition-delay: 0s;
+}
+.dropdown:hover .content {
+  opacity: 1;
+  top: 0px;
+}
+.content:nth-child(1) {
+  transition-delay: 0.45s;
+}
+.content:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.content:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.content:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.content:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.content:nth-child(6) {
+  transition-delay: 0.2s;
+}
+.content:nth-child(7) {
+  transition-delay: 0.15s;
+}
+.content:nth-child(8) {
+  transition-delay: 0.1s;
+}
+.content:nth-child(9) {
+  transition-delay: 0.05s;
+}
+.content:nth-child(10) {
+  transition-delay: 0s;
+}
+.dropdown:hover .content:nth-child(1) {
+  transition-delay: 0.25s;
+}
+.dropdown:hover .content:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.dropdown:hover .content:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.dropdown:hover .content:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.dropdown:hover .content:nth-child(5) {
+  transition-delay: 0.45s;
+}
+.dropdown:hover .content:nth-child(6) {
+  transition-delay: 0.5s;
+}
+.dropdown:hover .content:nth-child(7) {
+  transition-delay: 0.55s;
+}
+.dropdown:hover .content:nth-child(8) {
+  transition-delay: 0.6s;
+}
+.dropdown:hover .content:nth-child(9) {
+  transition-delay: 0.65s;
+}
+.dropdown:hover .content:nth-child(10) {
+  transition-delay: 0.7s;
+}
+
+h3{
+  padding-top: 20px;
+}
+
+h1{
+  text-align: center;
+  display: flex;
+  justify-content:space-around;
+
+}
+
+.item:link{
+  text-decoration: none;
+  color: black;
+}
+
+.item:visited{
+  text-decoration: none;
+  color: black;
+}
+
+.item:hover{
+  text-decoration: none;
+}
+
+header{
+  background-color: #be7c3d;
+  border-radius: 20%;
+}
+
+p{
+  font-family: Oswald;
+  font-size: 18px;
+}
+
+/** Techniques **/
+
+.croissant img{
+  float: right;
+}
+
+.brioche img{
+  float:right;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Oswald;
+}
+
+.wrapper{
+  width:100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card{
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,0.99);
+  box-shadow: 0px 10px 30 px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card > row{
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card > .row > .icon{
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.card > .row > .description{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+
+.description p{
+  color: #000000;
+  padding-top: 5px;
+  font-weight: bold;
+  font-family: Roboto;
+}
+
+.description h4{
+  text-transform: uppercase;
+}
+
+input{
+  display: none;
+}
+
+input:checked + label{
+  width: 600px;
+}
+
+input:checked + label .description{
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-image: url(/assets/poolish.jpg);
+}
+
+.card[for="c2"] {
+  background-image: url(/assets/biga.jpg);
+}
+
+.card[for="c3"] {
+  background-image: url(/assets/sourdough.jpg);
+}
+
+.card[for="c4"] {
+  background-image: url(/assets/sponge.jpg);
+}
+
+.unorderedList{
+  padding-left: 20px;
+}
+
+.leaveAlone{
+  padding-left: 10px;
+}
+
+#beforeList{
+  padding-left: 10px;
+}
+
+#techFoot{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #00000057;
+}
+
+/** Styles **/
+#styleFoot{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #00000057;
+  transform: translateY(199px);
+}
+
+/** Ingredients **/
+#ingredientFoot{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #00000057;
+  transform: translateY(199px);
+}
+
+/**Temperature **/
+#tempFoot{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #00000057;
+  transform: translateY(199px);
+}
+
+
+Joshua Abeni
+Omaha South High School
+Class of 2024

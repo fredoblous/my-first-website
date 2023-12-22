@@ -258,19 +258,19 @@ input:checked + label .description{
 }
 
 .card[for="c1"] {
-  background-image: url(/assets/poolish.jpg);
+  background-image: url(poolish.jpg);
 }
 
 .card[for="c2"] {
-  background-image: url(/assets/biga.jpg);
+  background-image: url(biga.jpg);
 }
 
 .card[for="c3"] {
-  background-image: url(/assets/sourdough.jpg);
+  background-image: url(sourdough.jpg);
 }
 
 .card[for="c4"] {
-  background-image: url(/assets/sponge.jpg);
+  background-image: url(sponge.jpg);
 }
 
 .unorderedList{

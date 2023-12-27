@@ -147,7 +147,7 @@ h1{
   text-decoration: none;
 }
 
-header{
+#homeHead{
   background-color: #be7c3d;
   border-radius: 20%;
 }
@@ -301,5 +301,21 @@ input:checked + label .description{
   transform: translateY(199px);
 }
 
+/** Ingredients **/
+#ingFoot{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #00000057;
+  transform: translateY(199px);
+}
 
+/**Temperature **/
+.tempFoot{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #00000057;
+  transform: translateY(199px);
+}
 
